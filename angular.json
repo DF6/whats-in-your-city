@@ -103,6 +103,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "whats-in-your-city:build:production",
+            "firebaseProject": "whats-in-your-city",
+            "firebaseHostingSite": "whats-in-your-city"
+          }
         }
       }
     }

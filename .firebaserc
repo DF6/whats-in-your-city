@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "whats-in-your-city"
+  },
+  "targets": {
+    "whats-in-your-city": {
+      "hosting": {
+        "whats-in-your-city": [
+          "whats-in-your-city"
+        ]
+      }
+    }
   }
 }
