@@ -7,5 +7,5 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'whats-in-your-city-2' + environment.environmentName;
+  title = 'whats-in-your-city';
 }
