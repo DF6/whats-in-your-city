@@ -1,0 +1,29 @@
+@import '../../../assets/styles/color.scss';
+
+.navigation-card {
+    margin: 0.5rem;
+    background-color: $grey;
+    border-radius: 1.5rem 1.5rem 0 0;
+}
+
+.navigation-card.no-progress-bar {
+    border-radius: 1.5rem;
+}
+
+.navigation-card[showProgressBar=false] {
+    border-radius: 1.5rem;
+}
+
+.navigation-card-title {
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.navigation-card-image {
+    margin: 0.5rem 0.5rem 0 0.5rem;
+    border-radius: 1.5rem;
+}
+
+.navigation-card-option-container {
+    padding: 1rem;
+}

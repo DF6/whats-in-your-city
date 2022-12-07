@@ -9,13 +9,12 @@ import { provideAnalytics,getAnalytics,ScreenTrackingService,UserTrackingService
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideDatabase,getDatabase } from '@angular/fire/database';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NavigationCardComponent } from './navigation-card/navigation-card.component';
-import { MatCardModule } from '@angular/material/card';
+
+import { NavigationCardComponent } from './components/navigation-card/navigation-card.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    NavigationCardComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +24,7 @@ import { MatCardModule } from '@angular/material/card';
     provideAuth(() => getAuth()),
     provideDatabase(() => getDatabase()),
     BrowserAnimationsModule,
-    MatCardModule
+    NavigationCardComponent
   ],
   providers: [
     ScreenTrackingService,UserTrackingService
