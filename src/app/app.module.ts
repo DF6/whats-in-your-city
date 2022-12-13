@@ -11,8 +11,8 @@ import { provideDatabase,getDatabase } from '@angular/fire/database';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 
-import { NavigationCardComponent } from './components/navigation-card/navigation-card.component';
 import { ListPageComponent } from './pages/list-page/list-page.component';
+import { NavigationCardComponent } from './components/navigation-card/navigation-card.component';
 
 @NgModule({
   declarations: [
@@ -22,10 +22,13 @@ import { ListPageComponent } from './pages/list-page/list-page.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAnalytics(() => getAnalytics()),
     provideAuth(() => getAuth()),
-    provideDatabase(() => getDatabase())
+    provideDatabase(() => getDatabase()),
+    BrowserAnimationsModule,
+    NavigationCardComponent
   ],
   providers: [
     ScreenTrackingService,UserTrackingService
