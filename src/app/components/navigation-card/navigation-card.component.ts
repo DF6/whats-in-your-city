@@ -38,4 +38,8 @@ export class NavigationCardComponent implements OnInit {
     }
   }
 
+  public executeOptionFunction(e: string) {
+    eval(e);
+  }
+
 }

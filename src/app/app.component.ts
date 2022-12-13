@@ -20,7 +20,7 @@ export class AppComponent {
     },
     options: [{
       optionText: 'Ofertas',
-      optionAction: 'toggleProgressBar()'
+      optionAction: 'this.toggleProgressBar()'
     }],
     showProgressBar: true,
     mainClass: 'navigation-card'
