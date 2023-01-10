@@ -15,6 +15,8 @@ export class ListPageComponent implements OnInit {
   constructor(private businessService: BusinessService) {}
 
   ngOnInit() {
+    this.categories = [];
+    this.items = [];
     this.businessService.getAllBusiness().subscribe((data) => {
       this.cardMapper(data);
     });
@@ -30,6 +32,9 @@ export class ListPageComponent implements OnInit {
 
   private cardMapper(data: any) {
     data.forEach((business: any) => {
+      if (!this.categories.find( c => c.name === business.businessType)) {
+        this.categories.push({ name: business.businessType, items: []});
+      }
       this.items.push({
         title: business.name,
         subtitle: business.businessType,
@@ -37,8 +42,8 @@ export class ListPageComponent implements OnInit {
         image: {
           url: '../assets/img/viva.png',
           alt: business.name,
-          width: 380,
-          height: 200
+          width: window.innerWidth/2.3,
+          height: window.innerHeight/6
         },
         options: [{
           optionText: 'Ofertas',
@@ -46,6 +51,14 @@ export class ListPageComponent implements OnInit {
         }],
         showProgressBar: true,
         mainClass: 'navigation-card'
+      });
+    });
+
+    this.categories.forEach((category) => {
+      this.items.forEach((item) => {
+        if (item.subtitle === category.name) {
+          category.items.push(item);
+        }
       });
     });
   }

@@ -1,0 +1,16 @@
+.list-page-container {
+    margin-top: 1rem;
+    
+    .list-page-category-title {
+        font-size: 1rem;
+        margin-left: 1rem;
+    }
+
+    .list-page-item {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        width: 44%;
+    }
+
+}
